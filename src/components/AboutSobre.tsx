@@ -42,7 +42,7 @@ export default function AboutSection() {
         {/* Texto - 50% */}
       <div className="w-full lg:w-1/2 h-[759px] flex flex-col justify-center gap-[10px] p-[15px]">
           <p className="w-full font-['Poppins'] font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[100%] text-black flex items-center">
-            <br />
+            
             Elevando o desempenho dos negócios por meio da inovação & tecnologia
           </p>
           <p className="w-full font-['Poppins'] font-medium text-[16px] sm:text-[18px] lg:text-[20px] leading-[100%] text-[#000000CC] flex items-center">
@@ -85,7 +85,7 @@ export default function AboutSection() {
 
           {/* Botão */}
           <div className="w-full max-w-[261px] h-[60px] mt-[10px] bg-[#FF6100] rounded-full px-[10px] py-[7px] flex items-center justify-between gap-[10px] ">
-            <p className="font-['Poppins'] font-semibold text-[10px] sm:text-[16px] leading-[100%] text-white ">
+            <p className="font-['Poppins'] font-semibold text-[13px] sm:text-[16px] leading-[100%] text-white ">
               EXPLORE OS SERVIÇOS
             </p>
             <div className="w-[32px] h-[32px] relative">
