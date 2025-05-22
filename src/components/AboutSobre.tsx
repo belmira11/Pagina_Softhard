@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Settings, Headset, ArrowRight } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -20,7 +21,7 @@ export default function AboutSection() {
 
       {/* Container principal com imagem e texto */}
       <div className="flex flex-col lg:flex-row gap-[15px] items-end">
-        {/* Imagem - 50% */}
+        {/* Imagem */}
         <div className="relative w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[759px] rounded-[15px] overflow-hidden shadow-md">
           <Image
             src="/1747636898591.jpeg"
@@ -30,19 +31,17 @@ export default function AboutSection() {
             quality={100}
             priority
           />
-         <div className="absolute bottom-[60px] right-[10px] w-[220px] sm:w-[286px] h-[100px] sm:h-[121px] bg-[#FF6100] rounded-[15px] p-[10px] flex flex-col justify-center items-end shadow-lg">
-  <p className="text-[32px] sm:text-[40px] font-['Poppins'] font-bold leading-[100%] text-white text-right">+5</p>
-  <p className="text-[16px] sm:text-[20px] font-['Poppins'] font-medium leading-[100%] text-white text-right">
-    ANOS DE EXPERIÊNCIA
-  </p>
-</div>
-
+          <div className="absolute bottom-[60px] right-[10px] w-[220px] sm:w-[286px] h-[100px] sm:h-[121px] bg-[#FF6100] rounded-[15px] p-[10px] flex flex-col justify-center items-end shadow-lg">
+            <p className="text-[32px] sm:text-[40px] font-['Poppins'] font-bold leading-[100%] text-white text-right">+5</p>
+            <p className="text-[16px] sm:text-[20px] font-['Poppins'] font-medium leading-[100%] text-white text-right">
+              ANOS DE EXPERIÊNCIA
+            </p>
+          </div>
         </div>
 
-        {/* Texto - 50% */}
-      <div className="w-full lg:w-1/2 h-[759px] flex flex-col justify-center gap-[10px] p-[15px]">
+        {/* Texto */}
+        <div className="w-full lg:w-1/2 h-[759px] flex flex-col justify-center gap-[10px] p-[15px]">
           <p className="w-full font-['Poppins'] font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[100%] text-black flex items-center">
-            
             Elevando o desempenho dos negócios por meio da inovação & tecnologia
           </p>
           <p className="w-full font-['Poppins'] font-medium text-[16px] sm:text-[18px] lg:text-[20px] leading-[100%] text-[#000000CC] flex items-center">
@@ -56,10 +55,7 @@ export default function AboutSection() {
           <div className="w-full flex flex-col sm:flex-row justify-between gap-[15px] mt-[10px]">
             {/* Card 1 */}
             <div className="w-full sm:w-[48%] rounded-[15px] p-[15px] flex flex-col gap-[10px] bg-white">
-              <div className="w-[32px] h-[32px] relative">
-                <div className="absolute top-[1.33px] left-[1.33px] w-[29.33px] h-[29.33px] border-[2px] border-[#FF6100]" />
-                <div className="absolute top-[12px] left-[12px] w-[8px] h-[8px] border-[2px] border-[#FF6100]" />
-              </div>
+              <Settings className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />
               <p className="font-['Poppins'] font-semibold text-[18px] sm:text-[20px] leading-[100%] text-black">
                 Solução Sob Medida
               </p>
@@ -70,10 +66,7 @@ export default function AboutSection() {
 
             {/* Card 2 */}
             <div className="w-full sm:w-[48%] rounded-[15px] p-[15px] flex flex-col gap-[10px] bg-white">
-              <div className="w-[32px] h-[32px] relative">
-                <div className="absolute top-[18.67px] left-[4px] w-[24px] h-[9.33px] border-[2px] border-[#FF6100]" />
-                <div className="absolute top-[4px] left-[4px] w-[24px] h-[20px] border-[2px] border-[#FF6100]" />
-              </div>
+              <Headset className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />
               <p className="font-['Poppins'] font-semibold text-[18px] sm:text-[20px] leading-[100%] text-black">
                 Suporte Dedicado
               </p>
@@ -88,10 +81,7 @@ export default function AboutSection() {
             <p className="font-['Poppins'] font-semibold text-[13px] sm:text-[16px] leading-[100%] text-white ">
               EXPLORE OS SERVIÇOS
             </p>
-            <div className="w-[32px] h-[32px] relative">
-              <div className="absolute top-[6.67px] left-[16px] w-[9.33px] h-[18.66px] border-[2px] border-white" />
-              <div className="absolute top-[6.67px] left-[6.67px] w-[18.66px] h-[16px] border-[2px] border-white" />
-            </div>
+            <ArrowRight className="w-[32px] h-[32px] text-white" strokeWidth={2} />
           </div>
         </div>
       </div>

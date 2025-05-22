@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,10 +8,9 @@ export default function Navbar() {
 
   return (
    <nav
-  className="fixed top-0 left-0 z-50 bg-[#FF6100] text-white h-[90px] rounded-full border-b border-white/30 
-  my-[10px] px-6 flex justify-between items-center 
-  max-w-[1550px] w-[calc(100%-50px)] gap-[15px] mx-auto"
->
+      className="fixed top-[10px] inset-x-[25px] z-50 bg-[#FF6100] text-white h-[90px] rounded-full border-b border-white/30 
+      px-6 flex justify-between items-center max-w-[1550px] mx-auto gap-[15px]"
+    >
 
       {/* Logo */}
       <div className="font-bold text-xl w-[160px] h-[50px] p-[10px] gap-[10px] flex items-center justify-center">
@@ -32,11 +32,11 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-        </ul>        
+        </ul>
       </div>
 
       {/* Botão desktop */}
-      <div className="hidden md:flex w-[238px] h-[60px]  pt-[7px] pr-[10px] pb-[7px] pl-[10px] gap-[10px] bg-white items-center rounded-full">
+      <div className="hidden md:flex w-[238px] h-[60px] pt-[7px] pr-[10px] pb-[7px] pl-[10px] gap-[10px] bg-white items-center rounded-full">
         <button className="w-[218px] h-[44px] bg-white text-[#FF6100] rounded-full font-['Poppins'] font-bold leading-[100%] tracking-[0%] flex items-center justify-center hover:bg-orange-100">
           TORNAR SOFTCLIENTE
         </button>
@@ -49,29 +49,11 @@ export default function Navbar() {
           className="focus:outline-none"
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-8 h-8 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          {menuOpen ? (
+            <X className="w-8 h-8 text-white" />
+          ) : (
+            <Menu className="w-8 h-8 text-white" />
+          )}
         </button>
       </div>
 
@@ -79,7 +61,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           className="fixed top-[90px] left-0 right-0 bg-[#FF6100] text-white rounded-b-xl border-t border-white/30 shadow-lg flex flex-col items-center py-4 space-y-4 z-40"
-          onClick={() => setMenuOpen(false)} // fecha menu ao clicar em algum item
+          onClick={() => setMenuOpen(false)}
         >
           {menuItems.map((item, i) => (
             <a
