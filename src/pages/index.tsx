@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
 import ChatButton from "@/components/ChatButton";
 import AboutSobre from "@/components/AboutSobre";
+import Testemunha from "@/components/Testemunha";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
      <Banner/>
      <ChatButton/>
        <AboutSobre/>
+       <Testemunha/>
      </div>
     </>
   );
