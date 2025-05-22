@@ -2,30 +2,30 @@ import Image from 'next/image';
 
 export default function Banner() {
   return (
-    <div className="relative w-full bg-cover bg-center min-h-screen">
+    <div className="relative w-full min-h-screen ">
       {/* Imagem de fundo */}
       <Image
         src="/fundo-top.jpg" // Substitua pelo caminho correto da imagem de fundo
         alt="Imagem de fundo"
         fill
         priority
-        className="object-cover -z-10"
+        className="object-cover -z-0"
       />
 
       {/* Conteúdo principal */}
-      <div className="max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-[90px] pt-[60px] pb-[20px] flex flex-col lg:flex-row gap-10">
+      <div className=" relative z-10 max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-[90px] pt-[60px] pb-[20px] flex flex-col lg:flex-row gap-10">
         {/* Seção de Informação */}
         <div className="w-full lg:w-[769px] flex flex-col justify-center p-2 text-center lg:text-left">
-          <p className="font-['Inter'] font-semibold text-[18px] sm:text-[20px] text-black mx-auto lg:mx-0">
+          <p className="font-['Poppins'] font-semibold text-[18px] sm:text-[20px] text-black mx-auto lg:mx-0">
             NOSSA AGÊNCIA
           </p>
-          <h2 className="font-['Inter'] font-bold text-[28px] sm:text-[36px] text-black mt-2 leading-snug">
+          <h2 className="font-['Poppins'] font-bold text-[28px] sm:text-[36px] text-black mt-2 leading-snug">
             MARKETING &<br />PUBLICIDADE
           </h2>
 
           <div className="w-full max-w-[524px] h-[1px] bg-black my-4 mx-auto lg:mx-0"></div>
 
-          <p className="font-['Inter'] font-medium text-[16px] sm:text-[20px] text-black leading-relaxed">
+          <p className="font-['Poppins'] font-medium text-[16px] sm:text-[20px] text-black leading-relaxed">
             Descubra estratégias inovadoras para uma comunicação visual impactante.
             Transformamos ideias em realidades atraentes, garantindo que sua marca se
             destaque em um mercado lotado. Nossa equipe dedicada aproveita técnicas de
@@ -65,14 +65,15 @@ export default function Banner() {
           </div>
 
           {/* Box de clientes satisfeitos */}
-          <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 w-[200px] sm:w-[241px] h-[110px] sm:h-[128px] px-[16px] py-[16px] bg-gray-800 text-white rounded-[15px] border border-[#E1E1E1] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-[20px] flex flex-col items-center text-center">
-            <p className="font-['Poppins'] font-bold text-[32px] sm:text-[40px] leading-[100%] text-white">
-              + de 115
-            </p>
-            <p className="font-['Poppins'] font-medium text-[16px] sm:text-[20px] leading-[100%] text-white">
-              Clientes Satisfeitos
-            </p>
-          </div>
+<div className="absolute bottom-18 right-4 sm:bottom-22 sm:right-6 w-[200px] sm:w-[241px] h-[110px] sm:h-[128px] px-[16px] py-[16px] bg-[rgba(31,41,55,0.7)] text-white rounded-[15px] border border-[#E1E1E1] shadow-[0_0_20px_rgba(0,0,0,0.2)] backdrop-blur-[20px] flex flex-col items-center text-center">
+  <p className="font-['Poppins'] font-bold text-[32px] sm:text-[40px] leading-[100%] text-white">
+    + de 115
+  </p>
+  <p className="font-['Poppins'] font-medium text-[16px] sm:text-[20px] leading-[100%] text-white">
+    Clientes Satisfeitos
+  </p>
+</div>
+
         </div>
       </div>
     </div>
