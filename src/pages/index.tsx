@@ -4,6 +4,7 @@ import Banner from "@/components/Banner";
 import ChatButton from "@/components/ChatButton";
 import AboutSobre from "@/components/AboutSobre";
 import Testemunha from "@/components/Testemunha";
+import Servico from "@/components/Servico";
 export default function Home() {
   return (
     <>
@@ -16,6 +17,7 @@ export default function Home() {
      <ChatButton/>
        <AboutSobre/>
        <Testemunha/>
+        <Servico/>
      </div>
     </>
   );
