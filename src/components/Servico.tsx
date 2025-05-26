@@ -37,27 +37,27 @@ export default function ServicosSection() {
         {[
           {
             icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
-            title: "Marketing & Estratégias",
+            title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
             icon: <Video className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
-            title: "Publicidade & Audiovisual",
+            title:  <>Publicidade &<br /> Audiovisual</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
             icon: <Video className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
-            title: "Publicidade & Audiovisual",
+            title: <>Publicidade &<br /> Audiovisual</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
             icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
-            title: "Marketing & Estratégias",
+            title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
             icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
-            title: "Marketing & Estratégias",
+            title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           }
 
@@ -69,7 +69,8 @@ export default function ServicosSection() {
             <div className="w-[52px] h-[52px] rounded-[10px] bg-white flex items-center justify-center">
               {card.icon}
             </div>
-            <p className="font-['Poppins'] font-semibold text-[24px] leading-[100%] text-black">
+           <p className="font-['Poppins'] font-semibold text-[24px] leading-[120%] text-black ">
+
               {card.title}
             </p>
             <p className="font-['Poppins'] font-medium text-[20px] leading-[100%] text-[#000000CC]">
@@ -80,4 +81,4 @@ export default function ServicosSection() {
       </div>
     </section>
   );
-}
+} 
