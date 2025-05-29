@@ -1,17 +1,74 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores principais da marca */
+  --color-primary: #FF6100;
+  --color-white: #ffffff;
+  --color-black: #171717;
+  --color-gray: #D1D5DB;
+  
+  /* Cores de texto e background */
+  --background: var(--color-white);
+  --foreground: var(--color-black);
+  --text-muted: #00000099;
+  --text-semi-muted: #000000CC;
+  
+  /* Cores de estado e overlay */
+  --color-hover: rgba(255, 97, 0, 0.1);
+  --color-overlay: rgba(31, 41, 55, 0.7);
+  --color-border: #F8EDED;
+  --color-bg-muted: var(--color-gray);
+  
+  /* Espaçamentos */
+  --spacing-2: 0.5rem;    /* 8px */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-10: 2.5rem;   /* 40px */
+  --spacing-15: 3.75rem;  /* 60px */
+  --spacing-20: 5rem;     /* 80px */
+  --spacing-90: 22.5rem;  /* 90px */
+
+  /* Dimensões comuns */
+  --icon-size-sm: 28px;
+  --icon-size-md: 32px;
+  --icon-size-lg: 34px;
+  --button-height-sm: 44px;
+  --button-height-md: 54px;
+  --button-height-lg: 60px;
+  --button-height-xl: 90px;
+
+  /* Tipografia */
+  --font-family-primary: 'Poppins', system-ui, sans-serif;
+  
+  /* Tamanhos de fonte */
+  --font-size-xs: 13px;
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 26px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 40px;
+
+  /* Border radius */
+  --radius-full: 9999px;
+  --radius-15: 15px;
+  
+  /* Sombras */
+  --shadow-sm: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 0 20px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+
+  /* Transições */
+  --transition-default: all 300ms ease-in-out;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Tema escuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +76,99 @@
   }
 }
 
+/* Estilos base */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilitários comuns */
+.container {
+  width: 100%;
+  max-width: 1728px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* Classes de botões */
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 7px 10px;
+  font-weight: 600;
+  transition: var(--transition-default);
+  height: var(--button-height-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  padding: 7px 10px;
+  background: var(--color-white);
+  transition: var(--transition-default);
+  height: var(--button-height-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.btn-icon {
+  width: var(--button-height-xl);
+  height: var(--button-height-xl);
+  background: var(--color-primary);
+  border: 3px solid var(--color-white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Cards e containers */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-15);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-4);
+}
+
+.icon-circle {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+/* Animações */
+.fade-in {
+  opacity: 0;
+  transform: translateX(120%);
+  transition: var(--transition-default);
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

@@ -2,78 +2,75 @@ import { ArrowRight, PieChart, Video, Settings, MonitorSmartphone, PencilRuler, 
 
 export default function ServicosSection() {
   return (
-    <section className="w-full max-w-[1728px] mx-auto px-4 md:px-[90px] py-[25px] space-y-[10px] bg-gray-300">
+    <section className="w-full max-w-[1728px] mx-auto px-4 md:px-[90px] py-[20px] space-y-[8px] bg-[var(--color-bg-muted)]">
       {/* Top Title */}
-      <div className="w-full max-w-[1548px] mx-auto space-y-[10px]">
-      <div className="flex items-center h-[27px]">
-  <p className="font-['Poppins'] font-semibold text-[18px] leading-[100%] text-[#00000099] uppercase mr-[10px]">
-    SERVIÇOS
-  </p>
-  <div className="w-[242px] border-b-[1px] border-[#FF6100]"></div>
-</div>
+      <div className="w-full max-w-[1548px] mx-auto space-y-[8px]">
+        <div className="flex items-center h-[24px]">
+          <p className="font-[var(--font-family-primary)] font-semibold text-sm leading-[100%] text-[var(--text-muted)] uppercase mr-[10px]">
+            SERVIÇOS
+          </p>
+          <div className="w-[242px] border-b-[1px] border-[var(--color-primary)]"></div>
+        </div>
 
-
-        <p className="w-full max-w-[364px] font-['Poppins'] font-semibold text-[26px] leading-[100%] text-[#000000] uppercase">
+        <p className="w-full max-w-[364px] font-[var(--font-family-primary)] font-semibold text-xl leading-[100%] text-[var(--color-black)] uppercase">
           Confira nossos serviços
         </p>
       </div>
 
       {/* Cards Container */}
-      <div className="w-full max-w-[1548px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] py-[10px]">
+      <div className="w-full max-w-[1548px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px] py-[8px]">
         {/* Card 1 */}
-        <div className="w-full bg-transparent rounded-[15px] flex flex-col justify-between p-[15px]">
-          <p className="font-['Poppins'] font-medium text-[20px] leading-[100%] text-[#000000CC]">
+        <div className="w-full bg-transparent rounded-[var(--radius-15)] flex flex-col justify-between p-[15px] -ml-2">
+          <p className="font-[var(--font-family-primary)] font-medium text-base leading-relaxed text-[var(--text-semi-muted)]">
             Integramos estratégias com visão de futuro, abordagens criativas e tecnologias de ponta para oferecer experiências excepcionais ao cliente que impulsionam o crescimento e envolvem os mercados-alvo.
           </p>
-          <div className="w-full max-w-[256px] h-[60px] bg-[#FF6100] rounded-[5px] flex items-center justify-between px-[10px] mt-[20px] md:mt-[7px]">
-            <p className="w-[194px] h-[27px] font-['Poppins'] font-semibold text-[18px] text-white">
+          <div className="btn-primary w-full max-w-[256px] h-[50px] rounded-[5px] flex items-center justify-between px-[10px] mt-[15px] md:mt-[7px]">
+            <p className="w-[194px] h-[24px] font-[var(--font-family-primary)] font-semibold text-sm text-[var(--color-white)]">
               Ver todos os serviços
             </p>
-            <ArrowRight className="w-[32px] h-[32px] text-white" strokeWidth={2} />
+            <ArrowRight className="w-[24px] h-[24px] text-[var(--color-white)]" strokeWidth={2} />
           </div>
         </div>
 
         {/* Reusable Card Template */}
         {[
           {
-            icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
+            icon: <PieChart className="w-[24px] h-[24px] text-[var(--color-primary)]" strokeWidth={2} />,
             title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
-            icon: <Video className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
+            icon: <Video className="w-[24px] h-[24px] text-[var(--color-primary)]" strokeWidth={2} />,
             title:  <>Publicidade &<br /> Audiovisual</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
-            icon: <Video className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
+            icon: <Video className="w-[24px] h-[24px] text-[var(--color-primary)]" strokeWidth={2} />,
             title: <>Publicidade &<br /> Audiovisual</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
-            icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
+            icon: <PieChart className="w-[24px] h-[24px] text-[var(--color-primary)]" strokeWidth={2} />,
             title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           },
           {
-            icon: <PieChart className="w-[32px] h-[32px] text-[#FF6100]" strokeWidth={2} />,
+            icon: <PieChart className="w-[24px] h-[24px] text-[var(--color-primary)]" strokeWidth={2} />,
             title: <>Marketing &<br /> Estratégias</>,
             text: "Qui consequuntur quos accusamus magnam quo est molestiae eius laboriosam sunt doloribus quia impedit laborum velit"
           }
-
         ].map((card, index) => (
           <div
             key={index}
-            className="w-full h-auto bg-transparent border-[1px] border-white rounded-[15px] p-[15px] space-y-[10px]"
+            className="w-full h-auto bg-transparent border border-[var(--color-white)] rounded-[var(--radius-15)] p-4"
           >
-            <div className="w-[52px] h-[52px] rounded-[10px] bg-white flex items-center justify-center">
+            <div className="w-[44px] h-[44px] rounded-[8px] bg-transparent border border-[var(--color-white)] flex items-center justify-center mb-3">
               {card.icon}
             </div>
-           <p className="font-['Poppins'] font-semibold text-[24px] leading-[120%] text-black ">
-
+            <p className="font-[var(--font-family-primary)] font-semibold text-lg leading-[120%] text-[var(--color-black)] mb-2">
               {card.title}
             </p>
-            <p className="font-['Poppins'] font-medium text-[20px] leading-[100%] text-[#000000CC]">
+            <p className="font-[var(--font-family-primary)] font-medium text-sm leading-relaxed text-[var(--text-semi-muted)]">
               {card.text}
             </p>
           </div>
