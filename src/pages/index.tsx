@@ -7,14 +7,11 @@ import Testemunha from "@/components/Testemunha";
 import Servico from "@/components/Servico";
 import HowWork from "@/components/HowWork";
 import Trabalhamos from "@/components/Trabalhamos";
+import Portfolio from "@/components/Portfolio";
 export default function Home() {
   return (
     <>
-     <div className="bg-white min-h-screen">
-    
-
-     <Navbar/>
-    
+     <Navbar/>  
      <Banner/>
      <ChatButton/>
        <AboutSobre/>
@@ -22,7 +19,8 @@ export default function Home() {
         <Servico/>
         <HowWork/>
          <Trabalhamos/>
-     </div>
-    </>
+         <Portfolio/>
+     </>
   );
 }
+

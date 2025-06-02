@@ -6,7 +6,7 @@ export default function Navbar() {
   const menuItems = ["sobre", "servicos", "portfolio", "equipe", "contato"];
 
   return (
-    <nav className="fixed top-[8px] inset-x-[20px] z-50 bg-[var(--color-primary)] text-[var(--color-white)] h-[70px] rounded-full border-b border-white/30 
+    <nav className="fixed top-[8px] inset-x-[20px] z-50 bg-[var(--color-primary)] text-[var(--color-white)] h-[60px] rounded-full border-b border-white/30 
       px-3 flex justify-between items-center max-w-[1200px] mx-auto gap-2">
 
       {/* Logo */}
