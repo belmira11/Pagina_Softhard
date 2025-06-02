@@ -62,7 +62,7 @@ export default function Testemunha() {
     {/* Esquerda: 40% */}
     <div className="w-full lg:w-[40%] flex flex-col gap-4 text-[var(--color-white)]">
       <h2 className="font-[var(--font-family-primary)] text-[var(--font-size-3xl)] lg:text-[var(--font-size-4xl)] font-bold leading-tight">
-        Nossos clientes falam muito bem
+        Nossos clientes falam muito bem.
       </h2>
       <p className="font-[var(--font-family-primary)] text-[var(--font-size-sm)] lg:text-[var(--font-size-base)] font-medium leading-relaxed">
         Veja diretamente aqueles que experimentaram o impacto de nossa parceria e alcançaram seus objetivos estratégicos.

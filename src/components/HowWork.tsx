@@ -12,7 +12,7 @@ export default function HowWork() {
           <div className="w-[180px] border-b border-[var(--color-primary)]" />
         </div>
         <p className="font-[var(--font-family-primary)] font-semibold text-[var(--font-size-lg)] md:text-[var(--font-size-xl)] uppercase text-[var(--color-black)]">
-          COMO NÓS TRABALHAMOS
+          COMO NÓS TRABALHAMOS.
         </p>
       </div>
 

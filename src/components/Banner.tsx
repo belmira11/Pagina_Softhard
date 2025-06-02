@@ -19,7 +19,7 @@ export default function Banner() {
           </p>
 
           <h2 className="font-[var(--font-family-primary)] font-bold text-[20px] sm:text-[32px] text-[var(--color-black)] leading-tight">
-            Marketing &<br /> Publicidade
+            Marketing &<br /> Publicidade.
           </h2>
 
           <div className="w-[90%] max-w-[524px] h-[2px] bg-[var(--color-black)] my-2 mx-auto lg:mx-0"></div>

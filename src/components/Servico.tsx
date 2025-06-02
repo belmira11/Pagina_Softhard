@@ -29,7 +29,7 @@ export default function ServicosSection() {
           </p>
           <div className="btn-primary w-full max-w-[256px] h-[50px] rounded-[5px] flex items-center justify-between px-[10px] mt-[15px] md:mt-[7px]">
             <p className="w-[194px] h-[24px] font-[var(--font-family-primary)] font-semibold text-sm text-[var(--color-white)]">
-              Ver todos os serviços
+              Ver todos os serviços.
             </p>
             <ArrowRight className="w-[24px] h-[24px] text-[var(--color-white)]" strokeWidth={2} />
           </div>

@@ -71,7 +71,7 @@ export default function Navbar() {
           ))}
 
           <button className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] text-xs font-bold leading-none hover:bg-[var(--color-hover)] transition-all">
-            TORNAR SOFTCLIENTE
+            TORNAR SOFTCLIENTE.
           </button>
         </div>
       )}

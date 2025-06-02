@@ -79,7 +79,7 @@ export default function AboutSection() {
           {/* Botão */}
           <div className="btn-primary w-full max-w-[200px] h-[45px] mt-[20px]">
             <p className="font-[var(--font-family-primary)] font-semibold text-[13px] text-[var(--color-white)]">
-              EXPLORE OS SERVIÇOS
+              EXPLORE OS SERVIÇOS.
             </p>
             <ArrowRight className="w-[18px] h-[18px] text-[var(--color-white)]" strokeWidth={2} />
           </div>

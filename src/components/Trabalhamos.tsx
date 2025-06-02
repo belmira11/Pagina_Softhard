@@ -37,7 +37,7 @@ export default function HowWeWorkSection() {
             <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-sm border border-white/30">
               <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
               <span className="text-[var(--color-primary)] text-[10px] font-semibold whitespace-nowrap">
-                Prontidão para começar
+                Prontidão para começar.
               </span>
             </div>
           </div>
