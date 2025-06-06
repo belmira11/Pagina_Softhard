@@ -11,8 +11,8 @@ export default function HowWork() {
           </p>
           <div className="w-[180px] border-b border-[var(--color-primary)]" />
         </div>
-        <p className="font-[var(--font-family-primary)] font-semibold text-[var(--font-size-lg)] md:text-[var(--font-size-xl)] uppercase text-[var(--color-black)]">
-          COMO NÓS TRABALHAMOS.
+        <p className="font-[var(--font-family-primary)] font-semibold text-[var(--font-size-lg)] md:text-[var(--font-size-xl)] uppercase text-[color:var(--color-black)]">
+           COMO NÓS TRABALHAMOS.
         </p>
       </div>
 

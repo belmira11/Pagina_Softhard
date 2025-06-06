@@ -12,8 +12,9 @@ export default function Banner() {
         className="object-cover -z-0"
       />
 
-      <div className="relative z-10 max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-[90px] pt-16 pb-10 flex flex-col lg:flex-row gap-12">
-        <div className="w-full lg:w-[750px] flex flex-col justify-center p-2 text-center lg:text-left space-y-2">
+      <div className="relative z-10 max-w-[1728px] mx-auto px-4 sm:px-6 lg:px-[90px] pt-24 sm:pt-28 pb-10 flex flex-col lg:flex-row gap-12">
+        {/* Seção de texto */}
+        <div className="w-full lg:w-[750px] flex flex-col justify-center p-2 text-left space-y-2">
           <p className="font-[var(--font-family-primary)] font-semibold text-[13px] sm:text-[14px] text-[var(--color-black)] tracking-wide uppercase">
             Nossa Agência
           </p>
@@ -22,13 +23,13 @@ export default function Banner() {
             Marketing &<br /> Publicidade.
           </h2>
 
-          <div className="w-[90%] max-w-[524px] h-[2px] bg-[var(--color-black)] my-2 mx-auto lg:mx-0"></div>
+          <div className="w-[90%] max-w-[524px] h-[2px] bg-[var(--color-black)] my-2"></div>
 
-          <p className="font-[var(--font-family-primary)] font-medium text-[12px] sm:text-[13px] text-[var(--color-black)] leading-relaxed max-w-[600px] mx-auto lg:mx-0">
+          <p className="font-[var(--font-family-primary)] font-medium text-[12px] sm:text-[13px] text-[var(--color-black)] leading-relaxed max-w-[600px]">
             Descubra estratégias inovadoras para uma comunicação visual impactante. Transformamos ideias em realidades atraentes, garantindo que sua marca se destaque em um mercado competitivo. Nossa equipe dedicada utiliza técnicas de ponta para entregar resultados excepcionais.
           </p>
 
-          <div className="pt-2 flex justify-center lg:justify-start">
+          <div className="pt-2">
             <a href="#servicos" className="scroll-smooth">
               <button className="btn-outline w-[230px] sm:w-[261px] h-[var(--button-height-md)] sm:h-[var(--button-height-lg)] flex items-center justify-center gap-2 border-2 border-[#FF6100] rounded-full px-6 py-3 hover:bg-orange-100 transition">
                 <span className="font-[var(--font-family-primary)] font-semibold text-[11px] sm:text-[13px] text-[var(--color-black)]">
@@ -40,6 +41,7 @@ export default function Banner() {
           </div>
         </div>
 
+        {/* Imagem com destaque */}
         <div className="w-full lg:w-[750px] flex justify-center relative p-2">
           <div className="relative w-[90%] max-w-[609px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[609px] shadow-[var(--shadow-sm)]">
             <Image

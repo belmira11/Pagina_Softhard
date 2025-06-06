@@ -7,49 +7,46 @@ export default function HowWeWorkSection() {
       <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8 max-w-6xl mx-auto">
         {/* Lado esquerdo - Conteúdo */}
         <div className="w-full lg:w-[55%] flex flex-col gap-4">
-          <div className="inline-flex items-center bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-sm border border-white/20 w-fit">
-            <span className="text-[var(--color-primary)] text-xs font-bold">
+          <div className="inline-flex items-center bg-white rounded-md px-2 py-1 border border-white/20 w-fit">
+            <span className="text-[var(--color-primary)] text-[10px] font-bold">
               NÃO PERCA
             </span>
           </div>
 
-          <h2 className="text-lg lg:text-2xl font-bold text-[var(--color-black)] leading-tight">
+          <h2 className="text-base lg:text-xl font-bold text-[var(--color-black)] leading-tight">
             Revolucione sua experiência digital hoje
           </h2>
 
-          <p className="text-xs lg:text-sm text-[var(--text-semi-muted)] leading-relaxed">
+          <p className="text-xs text-[var(--text-semi-muted)] leading-relaxed">
             A Strategia acelera o crescimento do seu negócio por meio de soluções inovadoras e tecnologia de ponta.
           </p>
 
           <div className="flex flex-wrap gap-2">
-            <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-sm border border-white/30">
-              <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
-              <span className="text-[var(--color-primary)] text-[10px] font-semibold whitespace-nowrap">
-                Atendimento 24/7h
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-sm border border-white/30">
-              <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
-              <span className="text-[var(--color-primary)] text-[10px] font-semibold whitespace-nowrap">
-                Suporte Premium
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white/80 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-sm border border-white/30">
-              <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
-              <span className="text-[var(--color-primary)] text-[10px] font-semibold whitespace-nowrap">
-                Prontidão para começar.
-              </span>
-            </div>
+            {[
+              "Atendimento 24/7h",
+              "Suporte Premium",
+              "Prontidão para começar.",
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-1.5 bg-white rounded-md px-2 py-1 border border-white/30"
+              >
+                <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)]" />
+                <span className="text-[var(--color-primary)] text-[9px] font-semibold whitespace-nowrap">
+                  {item}
+                </span>
+              </div>
+            ))}
           </div>
 
-          <button className="btn-primary bg-gradient-to-r from-[var(--color-primary)] to-[#E55100] hover:from-[#E55100] hover:to-[#D84315] px-4 py-2 text-[10px] lg:text-xs font-semibold rounded-lg shadow-md hover:scale-105 transition-all w-fit mt-2">
+          <button className="bg-gradient-to-r from-[var(--color-primary)] to-[#E55100] hover:from-[#E55100] hover:to-[#D84315] px-3 py-1.5 text-[10px] font-semibold rounded-full transition-all w-fit mt-2 text-white">
             Marcar Consulta Gratuita
           </button>
         </div>
 
         {/* Lado direito - Imagem */}
         <div className="w-full lg:w-[45%]">
-          <div className="relative w-full h-[280px] rounded-lg overflow-hidden shadow-lg">
+          <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
             <Image
               src="/fff.jpg"
               alt=""
@@ -59,7 +56,6 @@ export default function HowWeWorkSection() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
