@@ -8,6 +8,7 @@ import Servico from "@/components/Servico";
 import HowWork from "@/components/HowWork";
 import Trabalhamos from "@/components/Trabalhamos";
 import Portfolio from "@/components/Portfolio";
+import Equipe from "@/components/equipe";
 export default function Home() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function Home() {
         <HowWork/>
          <Trabalhamos/>
          <Portfolio/>
+         <Equipe/>
      </>
   );
 }
