@@ -8,7 +8,7 @@ import Servico from "@/components/Servico";
 import HowWork from "@/components/HowWork";
 import Trabalhamos from "@/components/Trabalhamos";
 import Portfolio from "@/components/Portfolio";
-import Equipe from "@/components/equipe";
+import Equipe from "@/components/Equipe"
 export default function Home() {
   return (
     <>

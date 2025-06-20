@@ -49,7 +49,7 @@ export default function PortfolioMain() {
           <div className="flex-1 h-px bg-orange-500 max-w-[120px]" />
         </div>
         <h2 className="font-semibold text-lg md:text-xl uppercase text-black font-sans">
-          Confira nosso portfólio
+          Confira nosso portfólio.
         </h2>
       </div>
 
