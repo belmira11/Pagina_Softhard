@@ -1,3 +1,4 @@
+'use client';
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -5,11 +6,11 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuItems = ["sobre", "servicos", "portfolio", "equipe", "contato"];
 
-  const scrollToFormulario = () => {
+  const scrollToFormulario = (fromMobile = false) => {
     const section = document.getElementById("form-consulta");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setMenuOpen(false); // fecha o menu mobile se estiver aberto
+      if (fromMobile) setMenuOpen(false); // Só fecha o menu se for do mobile
     }
   };
 
@@ -43,17 +44,17 @@ export default function Navbar() {
       {/* Botão desktop */}
       <div className="hidden md:flex h-[36px] bg-[var(--color-white)] items-center rounded-full px-3">
         <button
-          onClick={scrollToFormulario}
+          onClick={() => scrollToFormulario(false)} // Não fecha o menu aqui
           className="text-[var(--color-primary)] font-[var(--font-family-primary)] text-xs font-bold leading-none flex items-center justify-center hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
         >
           TORNAR SOFTCLIENTE
         </button>
       </div>
 
-      {/* Botão "Começar" + menu hamburguer no mobile */}
+      {/* Botão Começar + ícone menu mobile */}
       <div className="md:hidden flex items-center gap-2">
         <button
-          onClick={scrollToFormulario}
+          onClick={() => scrollToFormulario(true)}
           className="bg-[var(--color-white)] text-[var(--color-primary)] text-xs font-bold px-3 py-1 rounded-full hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition"
         >
           Começar
@@ -76,20 +77,20 @@ export default function Navbar() {
       {menuOpen && (
         <div
           className="fixed top-[70px] left-0 right-0 bg-[var(--color-primary)] text-[var(--color-white)] rounded-b-lg border-t border-white/30 shadow-md flex flex-col items-center py-2 space-y-2 z-40"
-          onClick={() => setMenuOpen(false)}
         >
           {menuItems.map((item, i) => (
             <a
               key={i}
               href={`#${item}`}
               className="font-[var(--font-family-primary)] font-medium text-xs leading-none hover:underline"
+              onClick={() => setMenuOpen(false)}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </a>
           ))}
 
           <button
-            onClick={scrollToFormulario}
+            onClick={() => scrollToFormulario(true)} // Aqui fecha o menu
             className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] text-xs font-bold leading-none hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
           >
             TORNAR SOFTCLIENTE.
