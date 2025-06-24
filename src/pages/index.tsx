@@ -9,6 +9,9 @@ import HowWork from "@/components/HowWork";
 import Trabalhamos from "@/components/Trabalhamos";
 import Portfolio from "@/components/Portfolio";
 import Equipe from "@/components/Equipe"
+import FAQSection from "@/components/Questionario";
+import ContatoSection from "@/components/Contato";
+import Footer from "@/components/Footer"
 export default function Home() {
   return (
     <>
@@ -32,6 +35,9 @@ export default function Home() {
       <Trabalhamos/>
       <Portfolio/>
       <Equipe/>
+      <FAQSection/>
+      <ContatoSection/>
+      <Footer/>
     </>
   );
 }

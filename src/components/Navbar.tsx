@@ -5,6 +5,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuItems = ["sobre", "servicos", "portfolio", "equipe", "contato"];
 
+  const scrollToFormulario = () => {
+    const section = document.getElementById("form-consulta");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // fecha o menu mobile se estiver aberto
+    }
+  };
+
   return (
     <nav className="fixed top-[8px] inset-x-[20px] z-50 bg-[var(--color-primary)] text-[var(--color-white)] h-[60px] rounded-full border-b border-white/30 
       px-3 flex justify-between items-center max-w-[1200px] mx-auto gap-2">
@@ -34,13 +42,23 @@ export default function Navbar() {
 
       {/* Botão desktop */}
       <div className="hidden md:flex h-[36px] bg-[var(--color-white)] items-center rounded-full px-3">
-        <button className="text-[var(--color-primary)] font-[var(--font-family-primary)] text-xs font-bold leading-none flex items-center justify-center hover:bg-[var(--color-hover)] transition-all">
+        <button
+          onClick={scrollToFormulario}
+          className="text-[var(--color-primary)] font-[var(--font-family-primary)] text-xs font-bold leading-none flex items-center justify-center hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+        >
           TORNAR SOFTCLIENTE
         </button>
       </div>
 
-      {/* Menu hamburguer para mobile */}
-      <div className="md:hidden flex items-center">
+      {/* Botão "Começar" + menu hamburguer no mobile */}
+      <div className="md:hidden flex items-center gap-2">
+        <button
+          onClick={scrollToFormulario}
+          className="bg-[var(--color-white)] text-[var(--color-primary)] text-xs font-bold px-3 py-1 rounded-full hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition"
+        >
+          Começar
+        </button>
+
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="focus:outline-none"
@@ -70,7 +88,10 @@ export default function Navbar() {
             </a>
           ))}
 
-          <button className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] text-xs font-bold leading-none hover:bg-[var(--color-hover)] transition-all">
+          <button
+            onClick={scrollToFormulario}
+            className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] text-xs font-bold leading-none hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+          >
             TORNAR SOFTCLIENTE.
           </button>
         </div>
