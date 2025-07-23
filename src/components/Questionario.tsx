@@ -2,39 +2,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const faqList = [
-  {
-    pergunta: 'O que é a Softhard?',
-    resposta:
-      'A Softhard é uma academia e empresa de soluções digitais que oferece formação, consultoria e desenvolvimento de projetos nas áreas de tecnologia e comunicação.',
-  },
-  {
-    pergunta: 'Quais serviços vocês oferecem?',
-    resposta:
-      'Oferecemos marketing digital, desenvolvimento web, design gráfico, consultoria tecnológica e muito mais — tudo feito sob medida para o seu negócio.',
-  },
-  {
-    pergunta: 'Como posso inscrever-me em uma formação?',
-    resposta:
-      'Você pode acessar a seção "Serviços" ou "Formações", escolher a opção desejada e preencher o formulário com seus dados.',
-  },
-  {
-    pergunta: 'As formações são presenciais ou online?',
-    resposta:
-      'Nossas formações são majoritariamente online, mas também oferecemos opções presenciais em datas específicas.',
-  },
-  {
-    pergunta: 'Como posso entrar em contato com a Softhard?',
-    resposta:
-      'Você pode entrar em contato conosco através do formulário no site, pelo e-mail contato@softhard.com ou pelo nosso WhatsApp disponível na página inicial.',
-  },
-  {
-    pergunta: 'A Softhard desenvolve projetos personalizados para empresas?',
-    resposta:
-      'Sim! Desenvolvemos soluções digitais sob medida para atender às necessidades específicas de cada empresa, desde sites institucionais até sistemas completos.',
-  },
-];
-
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -42,29 +9,79 @@ export default function FAQSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
-    <section id="faq" className="py-10 px-2 md:px-8 bg-gray-300 text-black">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-left text-lg md:text-xl font-bold mb-8">
-          Questões Frequentes
-        </h2>
+  const faqList = [
+    {
+      pergunta: 'Quem é a Softhard e o que ela faz de diferente?',
+      resposta:
+        'A Softhard é mais do que uma empresa de tecnologia — somos uma academia de inovação que forma talentos e transforma ideias em soluções digitais incríveis.',
+    },
+    {
+      pergunta: 'Como vocês podem ajudar o meu negócio a crescer?',
+      resposta:
+        'Com estratégias personalizadas de marketing digital, desenvolvimento web sob medida e uma abordagem criativa que coloca os seus objetivos em primeiro lugar.',
+    },
+    {
+      pergunta: 'Quero fazer parte! Como me inscrevo nas formações?',
+      resposta:
+        'É fácil! Acesse a seção "Formações", escolha a área do seu interesse e preencha o formulário com seus dados. Nós cuidamos do resto.',
+    },
+    {
+      pergunta: 'As formações são online ou presenciais?',
+      resposta:
+        'Oferecemos formações online para todo o país e turmas presenciais em Luanda em datas especiais. Flexibilidade que se adapta a você!',
+    },
+    {
+      pergunta: 'Como entro em contato com a Softhard?',
+      resposta:
+        'Você pode nos chamar no WhatsApp, mandar um e-mail para contato@softhard.com ou preencher o formulário na seção "Contato". Estamos sempre prontos para conversar!',
+    },
+    {
+      pergunta: 'Posso contratar a Softhard para um projeto exclusivo?',
+      resposta:
+        'Sim! Desenvolvemos projetos personalizados que atendem às necessidades da sua empresa, com foco em inovação, usabilidade e impacto digital.',
+    },
+  ];
 
-        <div className="space-y-4">
+  return (
+    <section
+      id="faq"
+      className="bg-[var(--color-bg-muted)] py-14 px-4 md:px-8 text-black font-primary"
+    >
+      <div className="max-w-[1210px] mx-auto">
+        {/* Título alinhado à esquerda */}
+        <div className="mb-10 text-left">
+          <p className="uppercase text-xs text-text-muted font-bold tracking-wide mb-1">
+            FAQ
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-black">
+            Perguntas Frequentes
+          </h2>
+          <p className="text-sm text-text-semi-muted mt-2">
+            Ainda com dúvidas? Aqui estão algumas respostas para te ajudar.
+          </p>
+        </div>
+
+        {/* Lista de perguntas - cards mais largos */}
+        <div className="space-y-5">
           {faqList.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl transition w-full md:w-[90%] mx-auto"
+              className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all w-full"
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full px-3 md:px-6 py-1 md:py-2 flex justify-between items-center text-left text-xs md:text-sm font-semibold text-black min-h-0"
+                className="w-full px-6 py-5 flex justify-between items-center text-left text-sm font-semibold text-black hover:bg-gray-50 transition"
               >
                 {item.pergunta}
-                {openIndex === index ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                {openIndex === index ? (
+                  <ChevronUp size={20} className="text-primary" />
+                ) : (
+                  <ChevronDown size={20} className="text-primary" />
+                )}
               </button>
 
               {openIndex === index && (
-                <div className="px-3 md:px-6 pb-1 md:pb-2 text-xs md:text-xs text-black">
+                <div className="px-6 pb-5 text-sm text-gray-600 transition-all duration-300 ease-in-out">
                   {item.resposta}
                 </div>
               )}

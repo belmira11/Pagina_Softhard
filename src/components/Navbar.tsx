@@ -15,12 +15,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-[8px] inset-x-[20px] z-50 bg-[var(--color-primary)] text-[var(--color-white)] h-[60px] rounded-full border-b border-white/30 
-      px-3 flex justify-between items-center max-w-[1200px] mx-auto gap-2">
+    <nav className="w-full max-w-7xl mx-auto fixed top-2 left-1/2 -translate-x-1/2 z-50 bg-[var(--color-primary)] text-[var(--color-white)] h-[60px] rounded-full border-b border-white/30 px-4 md:px-8 flex justify-between items-center gap-2">
 
       {/* Logo */}
-      <div className="font-bold text-lg w-[120px] h-[40px] p-1 flex items-center justify-center">
-        <div className="font-[var(--font-family-primary)] font-semibold text-sm leading-none text-[var(--color-white)]">
+      <div className="font-bold w-[120px] h-[40px] p-1 flex items-center justify-center" style={{ fontSize: 'var(--font-size-base)' }}>
+        <div className="font-[var(--font-family-primary)] font-semibold leading-none text-[var(--color-white)]">
           SOFTHARD
         </div>
       </div>
@@ -32,7 +31,8 @@ export default function Navbar() {
             <li key={i}>
               <a
                 href={`#${item}`}
-                className="px-2 h-[30px] font-[var(--font-family-primary)] font-medium text-xs leading-none text-[var(--color-white)] hover:underline flex items-center justify-center transition-all"
+                className="px-2 h-[30px] font-[var(--font-family-primary)] font-medium leading-none text-[var(--color-white)] hover:underline flex items-center justify-center transition-all"
+                style={{ fontSize: 'var(--font-size-base)' }}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
@@ -45,7 +45,8 @@ export default function Navbar() {
       <div className="hidden md:flex h-[36px] bg-[var(--color-white)] items-center rounded-full px-3">
         <button
           onClick={() => scrollToFormulario(false)} // Não fecha o menu aqui
-          className="text-[var(--color-primary)] font-[var(--font-family-primary)] text-xs font-bold leading-none flex items-center justify-center hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+          className="text-[var(--color-primary)] font-[var(--font-family-primary)] font-bold leading-none flex items-center justify-center hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+          style={{ fontSize: 'var(--font-size-base)' }}
         >
           TORNAR SOFTCLIENTE
         </button>
@@ -55,7 +56,8 @@ export default function Navbar() {
       <div className="md:hidden flex items-center gap-2">
         <button
           onClick={() => scrollToFormulario(true)}
-          className="bg-[var(--color-white)] text-[var(--color-primary)] text-xs font-bold px-3 py-1 rounded-full hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition"
+          className="bg-[var(--color-white)] text-[var(--color-primary)] font-bold px-3 py-1 rounded-full hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition"
+          style={{ fontSize: 'var(--font-size-base)' }}
         >
           Começar
         </button>
@@ -82,7 +84,8 @@ export default function Navbar() {
             <a
               key={i}
               href={`#${item}`}
-              className="font-[var(--font-family-primary)] font-medium text-xs leading-none hover:underline"
+              className="font-[var(--font-family-primary)] font-medium leading-none hover:underline"
+              style={{ fontSize: 'var(--font-size-base)' }}
               onClick={() => setMenuOpen(false)}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -91,7 +94,8 @@ export default function Navbar() {
 
           <button
             onClick={() => scrollToFormulario(true)} // Aqui fecha o menu
-            className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] text-xs font-bold leading-none hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+            className="h-[32px] px-4 bg-[var(--color-white)] text-[var(--color-primary)] rounded-full font-[var(--font-family-primary)] font-bold leading-none hover:bg-[var(--color-hover)] focus:outline-none active:bg-[var(--color-hover)] transition-all"
+            style={{ fontSize: 'var(--font-size-base)' }}
           >
             TORNAR SOFTCLIENTE.
           </button>

@@ -7,32 +7,35 @@ import { CheckCircle } from 'lucide-react';
 export default function HowWeWorkSection() {
   const [showForm, setShowForm] = useState(false);
 
-  const handleToggleForm = () => {
-    setShowForm((prev) => !prev);
-  };
+  const handleToggleForm = () => setShowForm((prev) => !prev);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar os dados para seu backend ou serviço de email.
     alert("Formulário enviado com sucesso!");
   };
 
   return (
-    <section className="w-full max-w-[1728px] mx-auto bg-gradient-to-br from-[var(--color-border)] to-[#F0E5E5] px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-8 max-w-6xl mx-auto">
-        {/* Lado esquerdo - Conteúdo */}
-        <div className="w-full lg:w-[55%] flex flex-col gap-4">
+    <section
+      className="w-full min-h-[494px] py-10 bg-[var(--color-border)]"
+      style={{
+        fontFamily: 'var(--font-family-primary)',
+        fontSize: 'var(--font-size-base)',
+      }}
+    >
+      <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-8 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-[90px]">
+        {/* Lado esquerdo */}
+        <div className="flex flex-col gap-4 w-full lg:w-1/2">
           <div className="inline-flex items-center bg-white rounded-md px-2 py-1 border border-white/20 w-fit">
             <span className="text-[var(--color-primary)] text-[10px] font-bold">
               NÃO PERCA
             </span>
           </div>
 
-          <h2 className="text-base lg:text-xl font-bold text-[var(--color-black)] leading-tight">
+          <h2 className="text-xl sm:text-2xl font-bold text-[var(--color-black)]">
             Revolucione sua experiência digital hoje
           </h2>
 
-          <p className="text-xs text-[var(--text-semi-muted)] leading-relaxed">
+          <p className="text-sm text-[var(--text-semi-muted)] leading-relaxed">
             A Strategia acelera o crescimento do seu negócio por meio de soluções inovadoras e tecnologia de ponta.
           </p>
 
@@ -42,8 +45,8 @@ export default function HowWeWorkSection() {
                 key={idx}
                 className="flex items-center gap-1.5 bg-white rounded-md px-2 py-1 border border-white/30"
               >
-                <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-                <span className="text-[var(--color-primary)] text-[9px] font-semibold whitespace-nowrap">
+                <CheckCircle className="w-4 h-4 text-[var(--color-primary)]" />
+                <span className="text-[var(--color-primary)] text-[10px] font-semibold whitespace-nowrap">
                   {item}
                 </span>
               </div>
@@ -52,13 +55,16 @@ export default function HowWeWorkSection() {
 
           <button
             onClick={handleToggleForm}
-            className="bg-gradient-to-r from-[var(--color-primary)] to-[#E55100] hover:from-[#E55100] hover:to-[#D84315] px-3 py-1.5 text-[10px] font-semibold rounded-full transition-all w-fit mt-2 text-white"
+            className="bg-gradient-to-r from-[var(--color-primary)] to-[#E55100] hover:from-[#E55100] hover:to-[#D84315] px-4 py-2 text-xs font-semibold rounded-full text-white w-fit mt-2"
           >
             Marcar Consulta Gratuita
           </button>
 
           {showForm && (
-            <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg p-4 mt-4 shadow-md flex flex-col gap-3 w-full max-w-md text-xs">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white border border-gray-200 rounded-lg p-4 mt-4 shadow-md flex flex-col gap-3 w-full max-w-lg text-sm"
+            >
               <label className="flex flex-col">
                 Nome
                 <input type="text" required className="mt-1 border border-gray-300 rounded px-2 py-1" />
@@ -83,7 +89,7 @@ export default function HowWeWorkSection() {
               </label>
               <button
                 type="submit"
-                className="bg-[var(--color-primary)] hover:bg-[#D84315] text-white px-3 py-1 rounded-full text-[10px] font-semibold"
+                className="bg-[var(--color-primary)] hover:bg-[#D84315] text-white px-4 py-2 rounded-full text-sm font-semibold"
               >
                 Enviar
               </button>
@@ -92,8 +98,8 @@ export default function HowWeWorkSection() {
         </div>
 
         {/* Lado direito - Imagem */}
-        <div className="w-full lg:w-[45%]">
-          <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
+        <div className="w-full lg:w-1/2">
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[344px] overflow-hidden rounded-3xl">
             <Image
               src="/fff.jpg"
               alt="Como Trabalhamos"

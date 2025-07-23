@@ -39,7 +39,7 @@ export default function PortfolioMain() {
       : projetos.filter((p) => p.categoria === filtro);
 
   return (
-    <div className="w-full max-w-screen-2xl min-h-screen px-4 sm:px-8 lg:px-[90px] py-6 bg-gray-300 mx-auto">
+    <section className="w-full max-w-[1728px] min-h-screen mx-auto px-4 sm:px-8 lg:px-[90px] py-6 bg-gray-300">
       {/* Header Section */}
       <div className="w-full mb-6">
         <div className="flex items-center space-x-4 mb-2">
@@ -49,45 +49,44 @@ export default function PortfolioMain() {
           <div className="flex-1 h-px bg-orange-500 max-w-[120px]" />
         </div>
         <h2 className="font-semibold text-lg md:text-xl uppercase text-black font-sans">
-          Confira nosso portfólio.
+          Confira nosso portfólio
         </h2>
       </div>
 
-     {/* Tabs Section */}
-<div className="w-full mb-8">
-  <div className="flex flex-wrap gap-3 justify-center">
-    {tabs.map((tab, i) => (
-      <button
-        key={i}
-        type="button"
-        onClick={() => setFiltro(tab)}
-        className={`rounded-full py-1.5 px-2.5 flex items-center space-x-2 focus:outline-none transition-colors duration-200 ${
-          filtro === tab ? "bg-white" : "bg-gray-100"
-        }`}
-      >
-        <div
-          className={`w-3.5 h-3.5 rounded-full flex items-center justify-center flex-shrink-0 ${
-            filtro === tab ? "bg-orange-500" : "bg-orange-300"
-          }`}
-        >
-          <Check
-            className={`w-6 h-5 text-white ${
-              filtro === tab ? "" : "opacity-50"
-            }`}
-          />
+      {/* Tabs Section */}
+      <div className="w-full mb-8">
+        <div className="flex flex-wrap gap-3 justify-center">
+          {tabs.map((tab, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => setFiltro(tab)}
+              className={`rounded-full py-1.5 px-2.5 flex items-center space-x-2 focus:outline-none transition-colors duration-200 ${
+                filtro === tab ? "bg-white" : "bg-gray-100"
+              }`}
+            >
+              <div
+                className={`w-3.5 h-3.5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                  filtro === tab ? "bg-orange-500" : "bg-orange-300"
+                }`}
+              >
+                <Check
+                  className={`w-6 h-5 text-white ${
+                    filtro === tab ? "" : "opacity-50"
+                  }`}
+                />
+              </div>
+              <span
+                className={`font-semibold text-xs whitespace-nowrap font-sans ${
+                  filtro === tab ? "text-orange-500" : "text-orange-300"
+                }`}
+              >
+                {tab}
+              </span>
+            </button>
+          ))}
         </div>
-        <span
-          className={`font-semibold text-xs whitespace-nowrap font-sans ${
-            filtro === tab ? "text-orange-500" : "text-orange-300"
-          }`}
-        >
-          {tab}
-        </span>
-      </button>
-       ))}
-       </div>
-       </div>
-
+      </div>
 
       {/* Portfolio Grid */}
       <div className="w-full px-2 sm:px-4">
@@ -106,6 +105,6 @@ export default function PortfolioMain() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
